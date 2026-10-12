@@ -1,0 +1,253 @@
+/* ---------- Base & theme ---------- */
+:root {
+  --bg: #0f1115;
+  --surface: #171a21;
+  --surface-alt: #1e222b;
+  --border: #2a2f3a;
+  --text: #e7e9ee;
+  --text-dim: #9aa2b1;
+  --accent: #7aa2f7;
+  --accent-dim: #3b4a6b;
+  --code-bg: #11131a;
+  --code-text: #a6e3a1;
+  --danger: #e06c75;
+  --radius: 10px;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-alt: #f0f1f4;
+  --border: #d9dce2;
+  --text: #1b1e24;
+  --text-dim: #5b6372;
+  --accent: #3a63c9;
+  --accent-dim: #c7d4f2;
+  --code-bg: #eef0f4;
+  --code-text: #1f7a4d;
+  --danger: #c23b50;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Header / nav ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.theme-toggle {
+  background: var(--surface-alt);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+header li {
+  color: var(--text-dim);
+}
+
+header ul ul {
+  display: block;
+  margin-top: 0.35rem;
+  padding-left: 1rem;
+}
+
+header ul ul li {
+  font-size: 0.9rem;
+}
+
+/* ---------- Main layout ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main > div {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+}
+
+h1 {
+  color: var(--accent);
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+h2 {
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+p {
+  color: var(--text-dim);
+}
+
+/* ---------- Events heading acting as a clickable toggle ---------- */
+main > h1[onclick] {
+  cursor: pointer;
+  color: var(--accent);
+}
+
+main > p[onclick] {
+  cursor: pointer;
+  color: var(--text-dim);
+}
+
+main > p[onclick]:hover {
+  color: var(--accent);
+}
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+table.ws-table-all th,
+table.ws-table-all td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+table.ws-table-all th {
+  background: var(--surface-alt);
+  color: var(--accent);
+}
+
+table.ws-table-all tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.deprecated {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+/* ---------- Code blocks ---------- */
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+code {
+  font-family: "Fira Code", Consolas, Monaco, monospace;
+  color: var(--code-text);
+}
+
+/* ---------- JS events collapsible panel ---------- */
+#jsEvn {
+  display: none;
+  margin-top: 1rem;
+}
+
+#jsEvn.open {
+  display: block;
+}
+
+/* ---------- Live animation demo ---------- */
+.anim-demo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0;
+}
+
+.anim-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  background: var(--accent);
+  animation-name: slide-and-color;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slide-and-color {
+  0% {
+    transform: translateX(0);
+    background-color: var(--accent);
+  }
+  50% {
+    transform: translateX(120px);
+    background-color: #a6e3a1;
+  }
+  100% {
+    transform: translateX(0);
+    background-color: var(--accent);
+  }
+}

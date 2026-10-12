@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS, Events & Animations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <!-- CSS selectors, events, animations et pseudo classes -->
+    <div class="header-top">
+      <h1>Presentation sur les Sélecteurs, les Événements et les Animations CSS :</h1>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light/dark theme">Light mode</button>
+    </div>
+    <ul>
+      <li>
+        <a href="CSS selectors cheatsheet.pdf">Doc about -></a>
+        <ul>
+          <li>CSS selectors</li>
+          <li>Pseudo classes</li>
+        </ul>
+      </li>
+      <li>Events</li>
+      <li>Animations</li>
+    </ul>
+  </header>
+  <main>
+    <div>
+      <h1>CSS selectors</h1>
+      <p>
+        CSS selectors are used to "find" (or select) the HTML elements you
+        want to style. <a href="https://www.w3schools.com/css/css_selectors.asp">(w3schools)</a>
+      </p>
+      <p>We can divide CSS selectors into five categories:</p>
+      <ul>
+        <li>Simple selectors (select elements based on name, id, class)</li>
+        <li><a href="https://www.w3schools.com/css/css_combinators.asp">Combinator selectors</a> (select
+          elements based on a specific relationship between them)</li>
+        <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp">Pseudo-class selectors</a> (select elements
+          based on a certain state)</li>
+        <li><a href="https://www.w3schools.com/css/css_pseudo_elements.asp">Pseudo-elements selectors</a> (select
+          and style a part of an element)</li>
+        <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp">Attribute selectors</a> (select elements
+          based on
+          an attribute or attribute value)</li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h1>CSS Pseudo-classes</h1>
+      <p>
+        A CSS pseudo-class is a keyword that can be added to a selector, to define a style for a special state of an
+        element.<a href="https://www.w3schools.com/css/css_pseudo_classes.asp">(w3schools)</a>
+      </p>
+      <p>Some common use for pseudo-classes:</p>
+      <ul>
+        <li>Style an element when a user moves the mouse over it</li>
+        <li>Style visited and unvisited links differently</li>
+        <li>Style an element when it gets focus</li>
+        <li>Style valid/invalid/required/optional form elements</li>
+        <li>Style an element that is the first child of its parent</li>
+      </ul>
+
+    </div>
+
+    <h1 onclick="show(event)">Events using JavaScript</h1>
+    <p onclick="show(event)">It is like CSS Pseudo-classes but with more abilitys, for more click on this. </p>
+    <div id="jsEvn">
+      <p>
+        HTML has the ability to let events trigger actions in a browser, like starting a JavaScript when a user clicks
+        on an element
+        .<a href="https://www.w3schools.com/tags/ref_eventattributes.asp">(w3schools)</a>
+      </p>
+      <h2>Window Event Attributes :</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width:160px">Attribute</th>
+            <th style="width:75px">Value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onafterprint.asp">onafterprint</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run after the document is printed</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onbeforeprint.asp">onbeforeprint</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run before the document is printed</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onbeforeunload.asp">onbeforeunload</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when the document is about to be unloaded</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onerror.asp">onerror</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when an error occurs</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onhashchange.asp">onhashchange</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when there has been changes to the anchor part of the a URL</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onload.asp">onload</a></td>
+            <td><i>script</i></td>
+            <td>Fires after the page is finished loading</td>
+          </tr>
+          <tr>
+            <td>onmessage</td>
+            <td><i>script</i></td>
+            <td>Script to be run when the message is triggered</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onoffline.asp">onoffline</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when the browser starts to work offline</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_ononline.asp">ononline</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when the browser starts to work online</td>
+          </tr>
+          <tr>
+            <td>onpagehide</td>
+            <td><i>script</i></td>
+            <td>Script to be run when a user navigates away from a page</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onpageshow.asp">onpageshow</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when a user navigates to a page</td>
+          </tr>
+          <tr>
+            <td>onpopstate</td>
+            <td><i>script</i></td>
+            <td>Script to be run when the window's history changes</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onresize.asp">onresize</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the browser window is resized</td>
+          </tr>
+          <tr>
+            <td>onstorage</td>
+            <td><i>script</i></td>
+            <td>Script to be run when a Web Storage area is updated</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onunload.asp">onunload</a></td>
+            <td><i>script</i></td>
+            <td>Fires once a page has unloaded (or the browser window has been closed)</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Form Events :</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width:160px">Attribute</th>
+            <th style="width:75px">Value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onblur.asp">onblur</a></td>
+            <td><i>script</i></td>
+            <td>Fires the moment that the element loses focus</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onchange.asp">onchange</a></td>
+            <td><i>script</i></td>
+            <td>Fires the moment when the value of the element is changed</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_oncontextmenu.asp">oncontextmenu</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when a context menu is triggered</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onfocus.asp">onfocus</a></td>
+            <td><i>script</i></td>
+            <td>Fires the moment when the element gets focus</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_oninput.asp">oninput</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when an element gets user input</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_oninvalid.asp">oninvalid</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when an element is invalid</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onreset.asp">onreset</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the Reset button in a form is clicked</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onsearch.asp">onsearch</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the user writes something in a search field (for
+              &lt;input="search"&gt;)</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onselect.asp">onselect</a></td>
+            <td><i>script</i></td>
+            <td>Fires after some text has been selected in an element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onsubmit.asp">onsubmit</a></td>
+            <td><i>script</i></td>
+            <td>Fires when a form is submitted</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Keyboard Events :</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width:160px">Attribute</th>
+            <th style="width:75px">Value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onkeydown.asp">onkeydown</a></td>
+            <td><i>script</i></td>
+            <td>Fires when a user is pressing a key</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onkeypress.asp">onkeypress</a></td>
+            <td><i>script</i></td>
+            <td>Fires when a user presses a key</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onkeyup.asp">onkeyup</a></td>
+            <td><i>script</i></td>
+            <td>Fires when a user releases a key</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Mouse Events :</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width:160px">Attribute</th>
+            <th style="width:75px">Value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onclick.asp">onclick</a></td>
+            <td><i>script</i></td>
+            <td>Fires on a mouse click on the element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_ondblclick.asp">ondblclick</a></td>
+            <td><i>script</i></td>
+            <td>Fires on a mouse double-click on the element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onmousedown.asp">onmousedown</a></td>
+            <td><i>script</i></td>
+            <td>Fires when a mouse button is pressed down on an element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onmousemove.asp">onmousemove</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the mouse pointer is moving while it is over an element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onmouseout.asp">onmouseout</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the mouse pointer moves out of an element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onmouseover.asp">onmouseover</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the mouse pointer moves over an element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onmouseup.asp">onmouseup</a></td>
+            <td><i>script</i></td>
+            <td>Fires when a mouse button is released over an element</td>
+          </tr>
+          <tr>
+            <td>onmousewheel</td>
+            <td><i>script</i></td>
+            <td><span class="deprecated">Deprecated.</span> Use the <a href="https://www.w3schools.com/tags/ev_onwheel.asp">onwheel</a> attribute
+              instead</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onwheel.asp">onwheel</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the mouse wheel rolls up or down over an element</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Drag Events :</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width:160px">Attribute</th>
+            <th style="width:75px">Value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_ondrag.asp">ondrag</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when an element is dragged</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_ondragend.asp">ondragend</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run at the end of a drag operation</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_ondragenter.asp">ondragenter</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when an element has been dragged to a valid drop target</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_ondragleave.asp">ondragleave</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when an element leaves a valid drop target</td>
+          </tr>
+          <tr>
+            <td style="height: 32px"><a href="https://www.w3schools.com/tags/ev_ondragover.asp">ondragover</a></td>
+            <td style="height: 32px"><i>script</i></td>
+            <td style="height: 32px">Script to be run when an element is being dragged over a valid drop target</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_ondragstart.asp">ondragstart</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run at the start of a drag operation</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_ondrop.asp">ondrop</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when dragged element is being dropped</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Clipboard Events :</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width:160px">Attribute</th>
+            <th style="width:75px">Value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_oncopy.asp">oncopy</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the user copies the content of an element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_oncut.asp">oncut</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the user cuts the content of an element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onpaste.asp">onpaste</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the user pastes some content in an element</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Misc Events :</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width:160px">Attribute</th>
+            <th style="width:75px">Value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_onscroll.asp">onscroll</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when an element's scrollbar is being scrolled</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_oncanplay.asp">oncanplay</a></td>
+            <td><i>script</i></td>
+            <td>Script to be run when a file is ready to start playing</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/tags/ev_ontoggle.asp">ontoggle</a></td>
+            <td><i>script</i></td>
+            <td>Fires when the user opens or closes the &lt;details&gt; element</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">/more</a>
+    </div>
+
+    <div>
+      <h1>Animations :</h1>
+      <h2>What are CSS Animations?</h2>
+      <p>
+        An animation lets an element gradually change from one style to another. <br>
+        You can change as many CSS properties you want, as many times as you want. <br>
+        To use CSS animation, you must specify some keyframes for the animation. <br>
+        Keyframes hold what styles the element will have at certain times. <br>
+        <a href="https://www.w3schools.com/css/css3_animations.asp">(w3schools)</a>
+      </p>
+
+      <h2>The @keyframes Rule</h2>
+      <p>
+        When you specify CSS styles inside the <code>@keyframes</code> rule, the animation will gradually change
+        from the current style to the new style at certain times. To get an animation to work, you must bind the
+        animation to an element, using the <code>animation</code> property (or its longhand sub-properties below).
+      </p>
+      <pre><code>@keyframes slide-and-color {
+  0%   { transform: translateX(0);     background-color: #7aa2f7; }
+  50%  { transform: translateX(120px); background-color: #a6e3a1; }
+  100% { transform: translateX(0);     background-color: #7aa2f7; }
+}
+
+.box {
+  animation-name: slide-and-color;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}</code></pre>
+
+      <p>Live example of the code above:</p>
+      <div class="anim-demo">
+        <div class="anim-box"></div>
+        <p>This box loops the <code>slide-and-color</code> keyframes forever, reversing direction on every cycle.</p>
+      </div>
+
+      <h2>Animation Properties</h2>
+      <table class="ws-table-all notranslate">
+        <tbody>
+          <tr>
+            <th style="width:220px">Property</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_animation-name.asp">animation-name</a></td>
+            <td>Specifies the name of the <code>@keyframes</code> animation to bind to the element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_animation-duration.asp">animation-duration</a></td>
+            <td>Specifies how long time an animation should take to complete one cycle</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp">animation-timing-function</a></td>
+            <td>Specifies the speed curve of the animation (e.g. <code>ease</code>, <code>linear</code>, <code>ease-in-out</code>, <code>cubic-bezier()</code>)</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_animation-delay.asp">animation-delay</a></td>
+            <td>Specifies a delay before the animation will start</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_animation-iteration-count.asp">animation-iteration-count</a></td>
+            <td>Specifies the number of times an animation should run (or <code>infinite</code>)</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_animation-direction.asp">animation-direction</a></td>
+            <td>Specifies whether the animation should play forwards, backwards, or alternate between the two</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_animation-fill-mode.asp">animation-fill-mode</a></td>
+            <td>Specifies the style applied to the element before/after the animation (<code>none</code>, <code>forwards</code>, <code>backwards</code>, <code>both</code>)</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_animation-play-state.asp">animation-play-state</a></td>
+            <td>Specifies whether the animation is running or paused</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_animation.asp">animation</a></td>
+            <td>Shorthand for all animation properties, in order: <code>name duration timing-function delay iteration-count direction fill-mode play-state</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="https://www.w3schools.com/css/css3_animations.asp">/more</a>
+
+    </div>
+
+  </main>
+
+</body>
+<script>
+  function show(event) {
+    event.stopPropagation();
+    document.getElementById('jsEvn').classList.add('open');
+  }
+
+  document.addEventListener('click', function (event) {
+    const panel = document.getElementById('jsEvn');
+    if (panel.classList.contains('open') && !panel.contains(event.target)) {
+      panel.classList.remove('open');
+    }
+  });
+
+  (function () {
+    const root = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const stored = localStorage.getItem('theme');
+    if (stored) {
+      root.setAttribute('data-theme', stored);
+    }
+
+    function updateLabel() {
+      const current = root.getAttribute('data-theme') || 'dark';
+      toggle.textContent = current === 'light' ? 'Dark mode' : 'Light mode';
+    }
+    updateLabel();
+
+    toggle.addEventListener('click', function () {
+      const current = root.getAttribute('data-theme') || 'dark';
+      const next = current === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateLabel();
+    });
+  })();
+</script>
+
+</html>
